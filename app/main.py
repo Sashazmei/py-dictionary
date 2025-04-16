@@ -30,7 +30,7 @@ class Dictionary:
                 return index
             index = (index + 1) % self._capacity
             if index == start_index:
-                raise Exception("Hash table is full")
+                raise Exception(f"Hash table is full. Could not insert key: {key}")
         return index
 
     def __setitem__(self, key: object, value: object) -> None:
